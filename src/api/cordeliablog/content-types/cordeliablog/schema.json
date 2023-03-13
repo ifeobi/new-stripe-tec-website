@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cordeliablogs",
+  "info": {
+    "singularName": "cordeliablog",
+    "pluralName": "cordeliablogs",
+    "displayName": "cordeliablog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "author": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "cordeliablogs"
+    }
+  }
+}
